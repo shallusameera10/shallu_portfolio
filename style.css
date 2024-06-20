@@ -432,6 +432,9 @@ form .btn2{
 button.navbar-toggler {
     display: none;
 }
+navbar-toggler{
+    display: none;
+}
 /* -----------------responsive------------------ */
 @media only screen and (max-width:430px) {
 
@@ -440,6 +443,9 @@ button.navbar-toggler {
 button.navbar-toggler {
     display: block;
     float: right;
+}
+navbar-toggler{
+    display: block;
 }
 .mainHeader{
     padding: 0px;
