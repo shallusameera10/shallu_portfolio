@@ -4,30 +4,70 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #080808;
     color: #fff;
 }
 
+
+/* ///////// */
+
+.mainHeader{
+    padding: 10px 10px;
+}
+.menu{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.menu  li{
+    margin: 0px 15px;
+}
+
+.menu li a{
+    list-style-type: none ;
+    margin: 0px 15px;
+    text-decoration: none;
+    color: white;
+}
+.fa-bars {
+    display: none !important;
+}
+.header-text{
+    margin: 150px 50px;
+    font-size: 30px;
+}
+
+/* ////////////// */
 #header{
-    height: 100vh;
     width: 100%;
+    height:70vh;
     background-image: url('images/shallubg.png');
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 100px;
+   
+   
 }
-.container{
-    padding: 10px 10%;
 
-}
 
 .logo{
     width: 140px;
+     
+
+ 
 }
 
 nav ul li{
@@ -59,10 +99,7 @@ nav ul li a::after{
 nav ul li a:hover::after {
 width: 100%;
 }
-.header-text{
-    margin-top: 20%;
-    font-size: 30px;
-}
+
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -83,14 +120,26 @@ width: 100%;
     padding: 80px 0;
     color: ababab;
 }
+
+.aboutImg div img{
+    width: 100%;
+    border-radius:5px;
+}
+.aboutImg div h1 {
+    font-size: 60px;
+}
+.aboutImg div p {
+    font-size: 16px;
+    line-height: 28px;
+}
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-col-1{
+/* .about-col-1{
     flex-basis: 35%;
-}
+} */
 .about-col-1 img{
     width: 100%;
     height: 100%;
@@ -104,15 +153,12 @@ width: 100%;
     margin: 10px 0 10px;
     font-size: 20px;
 }
-.intro{
-    font-size: 22px;
-    line-height: 1.4;
-}
-.sub-title{
+
+/* .sub-title{
     font-size: 60px;
     font-weight: 600;
     color: #fff;
-}
+} */
 .tab-titles{
     display: flex;
     margin: 20px 0 30px;
@@ -237,9 +283,7 @@ margin-top: 50px;
 
 }
 .work{
-    width: 50%;
-     padding-left: 15px;
-    display: block;
+
     border-radius: 10px;
   
 }
@@ -371,16 +415,63 @@ form .btn2{
 }
 
 /* -----------------responsive------------------ */
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:430px) {
+
+
+/* >>>>>>>>>>>>>>>> */
+.mainHeader{
+    padding: 0px;
+}
+.menu{
+    display: none;
+}
+.phoneMenu {
+display: block;
+padding-left: 0px;
+}
+.phoneMenu li{
+list-style: none;
+margin: 20px ;
+}
+
+.phoneMenu li a{
+color: white;
+text-decoration: none;
+}
+.fa-bars {
+    display: block !important;
+    position: absolute;
+    right: 50px;
+    top: 30px;
+}
+
+.offcanvas{
+    color:white;
+    background-color: #363434;
+}
+
+/* >>>>>>>>>>>>>>>> */
+
+
     #header{
         background-image: url(images/shallubgsm.png);
+        background-size: contain;
     }
     .header-text {
-        margin-top: 100%;
+        margin: 140px 0px;
         font-size: 16px;
     } 
+    .aboutImg div h1 {
+        font-size: 40px;
+    }
     .header-text h1{
         font-size: 30px;
+    }
+    .nav{
+        display: none;
+    }
+    .work{
+        width: 50%;
     }
     nav .fas{
         display:block;
