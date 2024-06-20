@@ -21,19 +21,35 @@ body{
 .menu{
     display: flex;
     justify-content:center;
-    align-items: center;
-    margin-top: 30px;
+    /* align-items: center; */
+    /* margin-top: 30px; */
 }
 
 .menu  li{
     margin: 0px 15px;
+    list-style-type: none ;
+
 }
 
 .menu li a{
-    list-style-type: none ;
     margin: 0px 15px;
     text-decoration: none;
     color: white;
+}
+.menu li a:hover{
+    border-bottom:5px solid #28E98C;
+    transition: 0.5s;
+}
+.menu li a::after{
+    position: absolute;
+    width: 0;
+    height: 3px;
+    content: '';
+    /* background: #ff04ff; */
+    background: #28E98C;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
 }
 .fa-bars {
     display: none !important;
@@ -52,7 +68,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-nav{
+/* nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +76,7 @@ nav{
     padding: 100px;
    
    
-}
+} */
 
 
 .logo{
@@ -69,10 +85,10 @@ nav{
 
  
 }
-
+/* 
 nav ul li{
     display: inline-block;
-    list-style: none;
+    list-style: none;                                                                                  
     margin: 10px 20px;
 }
 
@@ -90,7 +106,7 @@ nav ul li a::after{
     width: 0;
     height: 3px;
     content: '';
-    /* background: #ff04ff; */
+    /* background: #ff04ff; 
     background: #28E98C;
     left: 0;
     bottom: -6px;
@@ -98,7 +114,7 @@ nav ul li a::after{
 }
 nav ul li a:hover::after {
 width: 100%;
-}
+} */
 
 @keyframes typing {
     from { width: 0 }
@@ -413,15 +429,22 @@ form .btn2{
 .copyright i{
     color: #f00707;
 }
-
+button.navbar-toggler {
+    display: none;
+}
 /* -----------------responsive------------------ */
 @media only screen and (max-width:430px) {
 
 
 /* >>>>>>>>>>>>>>>> */
+button.navbar-toggler {
+    display: block;
+    float: right;
+}
 .mainHeader{
     padding: 0px;
 }
+
 .menu{
     display: none;
 }
@@ -431,7 +454,8 @@ padding-left: 0px;
 }
 .phoneMenu li{
 list-style: none;
-margin: 20px ;
+    display: block;
+    margin: 20px ;
 }
 
 .phoneMenu li a{
@@ -449,7 +473,10 @@ text-decoration: none;
     color:white;
     background-color: #363434;
 }
+.tab-links{
+    margin-right: 30px;
 
+}
 /* >>>>>>>>>>>>>>>> */
 
 
