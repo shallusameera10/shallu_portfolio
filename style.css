@@ -438,6 +438,11 @@ navbar-toggler{
 #menuToggle{
     display: none;
 }
+#msg{
+    color: #28E98C;
+    margin-top: -10px;
+    display: block;
+}
 /* -----------------responsive------------------ */
 @media only screen and (max-width:430px) {
 
